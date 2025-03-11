@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      dockerfile: ./docker/Dockerfile
+      context: ./
+    environment:
+      DEBUG: true
+    ports:
+      - "5000:5000"
+    volumes:
+      - "./:/app"
+    network_mode: host
